@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173DC7FB2BCD51E400BD6825 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DC7FA2BCD51E400BD6825 /* AddItemViewController.swift */; };
 		179160F02BC6D18900EF019C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179160EF2BC6D18900EF019C /* SettingsViewController.swift */; };
 		179160F22BC6D22D00EF019C /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179160F12BC6D22D00EF019C /* ItemsView.swift */; };
 		179160F42BC6D4B600EF019C /* ItemsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179160F32BC6D4B600EF019C /* ItemsCollectionViewCell.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		173DC7FA2BCD51E400BD6825 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		179160EF2BC6D18900EF019C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		179160F12BC6D22D00EF019C /* ItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsView.swift; sourceTree = "<group>"; };
 		179160F32BC6D4B600EF019C /* ItemsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 			children = (
 				17B1B9CB2BC6CF1F007290FB /* ItemsViewController.swift */,
 				179160EF2BC6D18900EF019C /* SettingsViewController.swift */,
+				173DC7FA2BCD51E400BD6825 /* AddItemViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				17B1B9C82BC6CF1F007290FB /* AppDelegate.swift in Sources */,
 				179160F22BC6D22D00EF019C /* ItemsView.swift in Sources */,
 				17B1B9CA2BC6CF1F007290FB /* SceneDelegate.swift in Sources */,
+				173DC7FB2BCD51E400BD6825 /* AddItemViewController.swift in Sources */,
 				179160F02BC6D18900EF019C /* SettingsViewController.swift in Sources */,
 				179160F42BC6D4B600EF019C /* ItemsCollectionViewCell.swift in Sources */,
 			);

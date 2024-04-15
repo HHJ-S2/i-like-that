@@ -20,6 +20,12 @@ class ItemsViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(rightBarButtonItemTapped))
+    
+    rightBarButtonItem.tintColor = .black
+    navigationItem.rightBarButtonItem = rightBarButtonItem
+    
     setupTableView()
   }
   
@@ -29,6 +35,13 @@ class ItemsViewController: UIViewController {
     collectionView.register(ItemsCollectionViewCell.self, forCellWithReuseIdentifier: "ItemsCell")
     collectionView.dataSource = self
     collectionView.delegate = self
+  }
+  
+  @objc func rightBarButtonItemTapped() {
+    let nextVC = AddItemViewController()
+    
+    nextVC.hidesBottomBarWhenPushed = true
+    show(nextVC, sender: nil)
   }
 }
 
@@ -58,7 +71,7 @@ extension ItemsViewController: UICollectionViewDelegateFlowLayout {
   // MARK: cellSize
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let collectionViewWidth = collectionView.bounds.width
-    let cellItemForRow: CGFloat = 3
+    let cellItemForRow: CGFloat = 2
     let minimumSpacing: CGFloat = 2
     
     let width = (collectionViewWidth - (cellItemForRow - 1) * minimumSpacing) / cellItemForRow
