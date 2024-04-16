@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		173DC7FB2BCD51E400BD6825 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DC7FA2BCD51E400BD6825 /* AddItemViewController.swift */; };
+		173DC7FD2BCD540900BD6825 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DC7FC2BCD540900BD6825 /* AddItemView.swift */; };
+		173DC8002BCD559000BD6825 /* UITextField+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DC7FF2BCD559000BD6825 /* UITextField+Padding.swift */; };
+		173DC8022BCD59A500BD6825 /* UIColor+FlatColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DC8012BCD59A500BD6825 /* UIColor+FlatColors.swift */; };
+		173DC8042BCD5A3200BD6825 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DC8032BCD5A3200BD6825 /* UIColor+Hex.swift */; };
+		176B256B2BCEADDD008DFD0E /* UITextField+PlceholderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176B256A2BCEADDD008DFD0E /* UITextField+PlceholderColor.swift */; };
 		179160F02BC6D18900EF019C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179160EF2BC6D18900EF019C /* SettingsViewController.swift */; };
 		179160F22BC6D22D00EF019C /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179160F12BC6D22D00EF019C /* ItemsView.swift */; };
 		179160F42BC6D4B600EF019C /* ItemsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179160F32BC6D4B600EF019C /* ItemsCollectionViewCell.swift */; };
@@ -20,6 +25,11 @@
 
 /* Begin PBXFileReference section */
 		173DC7FA2BCD51E400BD6825 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		173DC7FC2BCD540900BD6825 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		173DC7FF2BCD559000BD6825 /* UITextField+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Padding.swift"; sourceTree = "<group>"; };
+		173DC8012BCD59A500BD6825 /* UIColor+FlatColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+FlatColors.swift"; sourceTree = "<group>"; };
+		173DC8032BCD5A3200BD6825 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		176B256A2BCEADDD008DFD0E /* UITextField+PlceholderColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+PlceholderColor.swift"; sourceTree = "<group>"; };
 		179160EF2BC6D18900EF019C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		179160F12BC6D22D00EF019C /* ItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsView.swift; sourceTree = "<group>"; };
 		179160F32BC6D4B600EF019C /* ItemsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -43,6 +53,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		173DC7FE2BCD555B00BD6825 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				173DC7FF2BCD559000BD6825 /* UITextField+Padding.swift */,
+				173DC8012BCD59A500BD6825 /* UIColor+FlatColors.swift */,
+				173DC8032BCD5A3200BD6825 /* UIColor+Hex.swift */,
+				176B256A2BCEADDD008DFD0E /* UITextField+PlceholderColor.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		179160EC2BC6CFCC00EF019C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +86,7 @@
 			children = (
 				179160F12BC6D22D00EF019C /* ItemsView.swift */,
 				179160F32BC6D4B600EF019C /* ItemsCollectionViewCell.swift */,
+				173DC7FC2BCD540900BD6825 /* AddItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -88,6 +110,7 @@
 		17B1B9C62BC6CF1F007290FB /* ilikethat */ = {
 			isa = PBXGroup;
 			children = (
+				173DC7FE2BCD555B00BD6825 /* Helper */,
 				179160ED2BC6CFD600EF019C /* Models */,
 				179160EE2BC6CFDC00EF019C /* Views */,
 				179160EC2BC6CFCC00EF019C /* Controllers */,
@@ -174,9 +197,14 @@
 				17B1B9C82BC6CF1F007290FB /* AppDelegate.swift in Sources */,
 				179160F22BC6D22D00EF019C /* ItemsView.swift in Sources */,
 				17B1B9CA2BC6CF1F007290FB /* SceneDelegate.swift in Sources */,
+				173DC8002BCD559000BD6825 /* UITextField+Padding.swift in Sources */,
+				173DC8042BCD5A3200BD6825 /* UIColor+Hex.swift in Sources */,
 				173DC7FB2BCD51E400BD6825 /* AddItemViewController.swift in Sources */,
+				173DC8022BCD59A500BD6825 /* UIColor+FlatColors.swift in Sources */,
 				179160F02BC6D18900EF019C /* SettingsViewController.swift in Sources */,
+				176B256B2BCEADDD008DFD0E /* UITextField+PlceholderColor.swift in Sources */,
 				179160F42BC6D4B600EF019C /* ItemsCollectionViewCell.swift in Sources */,
+				173DC7FD2BCD540900BD6825 /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
