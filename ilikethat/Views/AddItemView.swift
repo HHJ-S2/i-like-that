@@ -86,7 +86,7 @@ class AddItemView: UIView {
     let stackView = UIStackView(arrangedSubviews: [itemImage, inputStackView])
     stackView.spacing = 24
     stackView.axis = .vertical
-    stackView.alignment = .center
+    stackView.alignment = .fill
     return stackView
   }()
   
@@ -112,34 +112,34 @@ class AddItemView: UIView {
     
     stackView.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-      stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+      stackView.topAnchor.constraint(equalTo: container.safeAreaLayoutGuide.topAnchor, constant: 20),
+      stackView.leadingAnchor.constraint(equalTo: container.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+      stackView.trailingAnchor.constraint(equalTo: container.safeAreaLayoutGuide.trailingAnchor, constant: -20),
     ])
     
     itemImage.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      itemImage.widthAnchor.constraint(equalToConstant: 180),
-      itemImage.heightAnchor.constraint(equalToConstant: 180)
+      itemImage.heightAnchor.constraint(equalToConstant: 300)
     ])
     
     inputStackView.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      inputStackView.widthAnchor.constraint(equalToConstant: 240)
+      //      inputStackView.widthAnchor.constraint(equalToConstant: 240)
     ])
     
     nameTextField.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      nameTextField.heightAnchor.constraint(equalToConstant: 42)
+      nameTextField.heightAnchor.constraint(equalToConstant: 46)
     ])
     
     categoryTextField.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      categoryTextField.heightAnchor.constraint(equalToConstant: 42)
+      categoryTextField.heightAnchor.constraint(equalToConstant: 46)
     ])
     
     descriptionTextView.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      descriptionTextView.heightAnchor.constraint(equalToConstant: 42 * 2)
+      descriptionTextView.heightAnchor.constraint(equalToConstant: 46 * 2)
     ])
   }
   

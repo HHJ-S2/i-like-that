@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    
+    IQKeyboardManager.shared.enable = true
+    
     // 13이상인 경우에는 SceneDelegate에서 이미 초기화 되었으니까 바로 return
     if #available(iOS 13.0, *) {
         return true
