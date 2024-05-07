@@ -13,12 +13,20 @@ class AddItemView: UIView {
     let view = UIView()
     view.backgroundColor = .white
     view.addSubview(stackView)
+    view.addSubview(addIcon)
     return view
   }()
   
   lazy var itemImage = {
-    let imageView = UIImageView()
+    let imageView = UIButton()
     imageView.backgroundColor = UIColor.FlatColor.Gray.WhiteSmoke
+    return imageView
+  }()
+  
+  private lazy var addIcon = {
+    let imageView = UIImageView()
+    imageView.image = UIImage(systemName: "photo.badge.plus")
+    imageView.tintColor = UIColor.FlatColor.Gray.Iron
     return imageView
   }()
   
@@ -28,15 +36,16 @@ class AddItemView: UIView {
     textFiled.autocorrectionType = .no
     textFiled.spellCheckingType = .no
     textFiled.clearsOnBeginEditing = false
-    textFiled.font = UIFont.systemFont(ofSize: 16)
+    textFiled.font = UIFont.systemFont(ofSize: 18)
     textFiled.borderStyle = .none
     textFiled.layer.backgroundColor = UIColor.white.cgColor
-    textFiled.layer.borderColor = UIColor.gray.cgColor
+    textFiled.layer.borderColor = UIColor.FlatColor.Gray.Iron.cgColor
     textFiled.layer.borderWidth = 1
+    textFiled.layer.cornerRadius = 4
     textFiled.setLeftPaddingPoints(8)
     textFiled.setRightPaddingPoints(8)
     textFiled.placeholder = "Name"
-    textFiled.placeholderColor(UIColor.FlatColor.Gray.Iron)
+    textFiled.placeholderColor(UIColor.lightGray)
     return textFiled
   }()
   
@@ -46,15 +55,16 @@ class AddItemView: UIView {
     textFiled.autocorrectionType = .no
     textFiled.spellCheckingType = .no
     textFiled.clearsOnBeginEditing = false
-    textFiled.font = UIFont.systemFont(ofSize: 16)
+    textFiled.font = UIFont.systemFont(ofSize: 18)
     textFiled.borderStyle = .none
     textFiled.layer.backgroundColor = UIColor.white.cgColor
-    textFiled.layer.borderColor = UIColor.gray.cgColor
+    textFiled.layer.borderColor = UIColor.FlatColor.Gray.Iron.cgColor
     textFiled.layer.borderWidth = 1
+    textFiled.layer.cornerRadius = 4
     textFiled.setLeftPaddingPoints(8)
     textFiled.setRightPaddingPoints(8)
     textFiled.placeholder = "Category"
-    textFiled.placeholderColor(UIColor.FlatColor.Gray.Iron)
+    textFiled.placeholderColor(UIColor.lightGray)
     return textFiled
   }()
   
@@ -63,20 +73,21 @@ class AddItemView: UIView {
     textView.autocapitalizationType = .none
     textView.autocorrectionType = .no
     textView.spellCheckingType = .no
-    textView.font = UIFont.systemFont(ofSize: 16)
+    textView.font = UIFont.systemFont(ofSize: 18)
     textView.layer.backgroundColor = UIColor.white.cgColor
-    textView.layer.borderColor = UIColor.gray.cgColor
+    textView.layer.borderColor = UIColor.FlatColor.Gray.Iron.cgColor
     textView.layer.borderWidth = 1
+    textView.layer.cornerRadius = 4
     textView.textContainerInset = UIEdgeInsets(top: 8, left: 4, bottom: 8, right: 4)
     textView.text = "Description"
-    textView.textColor = UIColor.FlatColor.Gray.Iron
+    textView.textColor = UIColor.lightGray
     textView.textContainer.maximumNumberOfLines = 3
     return textView
   }()
   
   private lazy var inputStackView = {
     let stackView = UIStackView(arrangedSubviews: [nameTextField, categoryTextField, descriptionTextView])
-    stackView.spacing = 8
+    stackView.spacing = 12
     stackView.axis = .vertical
     stackView.alignment = .fill
     return stackView
@@ -129,17 +140,25 @@ class AddItemView: UIView {
     
     nameTextField.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      nameTextField.heightAnchor.constraint(equalToConstant: 46)
+      nameTextField.heightAnchor.constraint(equalToConstant: 48)
     ])
     
     categoryTextField.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      categoryTextField.heightAnchor.constraint(equalToConstant: 46)
+      categoryTextField.heightAnchor.constraint(equalToConstant: 48)
     ])
     
     descriptionTextView.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      descriptionTextView.heightAnchor.constraint(equalToConstant: 46 * 2)
+      descriptionTextView.heightAnchor.constraint(equalToConstant: 48 * 2)
+    ])
+    
+    addIcon.translatesAutoresizingMaskIntoConstraints = false
+    NSLayoutConstraint.activate([
+      addIcon.widthAnchor.constraint(equalToConstant: 40),
+      addIcon.heightAnchor.constraint(equalToConstant: 40),
+      addIcon.centerXAnchor.constraint(equalTo: itemImage.centerXAnchor),
+      addIcon.centerYAnchor.constraint(equalTo: itemImage.centerYAnchor)
     ])
   }
   

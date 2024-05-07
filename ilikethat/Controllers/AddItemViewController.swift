@@ -25,7 +25,7 @@ class AddItemViewController: UIViewController {
 
 extension AddItemViewController: UITextViewDelegate {
   func textViewDidBeginEditing(_ textView: UITextView) {
-    if textView.textColor == UIColor.FlatColor.Gray.Iron {
+    if textView.textColor == UIColor.lightGray {
       textView.text = nil
       textView.textColor = UIColor.black
     }
@@ -34,7 +34,7 @@ extension AddItemViewController: UITextViewDelegate {
   func textViewDidEndEditing(_ textView: UITextView) {
     if textView.text.isEmpty {
       textView.text = "Description"
-      textView.textColor = UIColor.FlatColor.Gray.Iron
+      textView.textColor = UIColor.lightGray
     }
   }
   
