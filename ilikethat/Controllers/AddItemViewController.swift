@@ -21,6 +21,12 @@ class AddItemViewController: UIViewController {
     mainView.descriptionTextView.delegate = self
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      let appearance = UINavigationBarAppearance()
+      appearance.backgroundColor = .white
+      self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+  }
 }
 
 extension AddItemViewController: UITextViewDelegate {
